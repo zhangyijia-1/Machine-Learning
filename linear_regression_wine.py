@@ -53,9 +53,8 @@ if __name__ == "__main__":
     # Load UCI Wine Quality dataset (red wine)
     # Original dataset: https://archive.ics.uci.edu/dataset/186/wine+quality
     wine = fetch_ucirepo(id=186)
-    X_raw = wine.data.features.values  # Extract raw feature matrix
-    y_raw = wine.data.targets.values.ravel() # Extract raw target values, flatten array
-
+    X_raw = wine.data.features.values  # feature matrix
+    y_raw = wine.data.targets.values.ravel() # target values
     print("Dataset name:", wine.metadata.name) # Print dataset name
     print("Number of samples:", X_raw.shape[0])    # Print total sample count
     print("Number of features:", X_raw.shape[1])   # Print total feature count

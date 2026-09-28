@@ -51,7 +51,7 @@ class GradientDescent:
 
 if __name__ == "__main__":
     # Load UCI Wine Quality dataset (red wine)
-    # Original dataset: https://archive.ics.uci.edu/dataset/186/wine+quality
+    #   Original dataset: https://archive.ics.uci.edu/dataset/186/wine+quality
     wine = fetch_ucirepo(id=186)
     X = wine.data.features.values  # feature matrix
     y = wine.data.targets.values.ravel() # target values

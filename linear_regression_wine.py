@@ -1,7 +1,7 @@
 import numpy as np
 from ucimlrepo import fetch_ucirepo
 
-# Define LinearRegression class as loss class
+
 class LinearRegression:
     def __init__(self, X, y):
         self.X = X                # Design matrix (feature matrix)

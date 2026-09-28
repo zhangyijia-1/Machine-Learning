@@ -53,14 +53,13 @@ if __name__ == "__main__":
     # Load UCI Wine Quality dataset (red wine)
     # Original dataset: https://archive.ics.uci.edu/dataset/186/wine+quality
     wine = fetch_ucirepo(id=186)
-    X_raw = wine.data.features.values  # feature matrix
-    y_raw = wine.data.targets.values.ravel() # target values
-    print("Dataset name:", wine.metadata.name) # Print dataset name
-    print("Number of samples:", X_raw.shape[0])    # Print total sample count
-    print("Number of features:", X_raw.shape[1])   # Print total feature count
-
-    # Feature standardization: scale features to mean=0 and std=1
-    X = (X_raw - np.mean(X_raw, axis=0)) / np.std(X_raw, axis=0)
+    X = wine.data.features.values  # feature matrix
+    y = wine.data.targets.values.ravel() # target values
+    print("Dataset name:", wine.metadata.name)
+    print("Number of samples:", X.shape[0])
+    print("Number of features:", X.shape[1])
+    # Standardize features (z-score)
+    X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
 
 
    

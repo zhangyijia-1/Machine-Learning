@@ -68,7 +68,6 @@ if __name__ == "__main__":
     shuffled_index = np.random.permutation(total_samples) # Generate shuffled index array
     train_ratio = 0.8                  # Define 80% data for training
     train_size = int(total_samples * train_ratio) # Calculate number of training samples
-
     train_idx = shuffled_index[:train_size] # Get indices for training set
     test_idx = shuffled_index[train_size:]  
 
